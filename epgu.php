@@ -16,7 +16,7 @@ class epgu_lib{
 	private $crypto_dir = '/files/epgu/';
 	
 	// префикс шелл-вызова утилиты cryptcp
-	// важно вызывать под sudo юзером
+	// важно вызывать от имени sudo пользователя, под которым установлены сертификаты в Крипто Про
 	// об утилите https://www.cryptopro.ru/products/other/cryptcp
 	private $cryptcp_prefix = 'sudo -u superuser /path/to/cryptcp/';
 	
