@@ -142,7 +142,7 @@ class epgu_lib{
 		
 		curl_close($ch);
 		
-		if(!$cls_request) $output = json_decode($output, true);
+		$output = $cls_request ? $output : json_decode($output, true);
 		
 		return $output;
 	}
