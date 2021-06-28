@@ -39,7 +39,7 @@ $result = $epgu->queue($q);
 Кроме checkCrypto() результат имеет структуру:
 
 ```
-array(1) {
+array(2) {
 	["success"]=> bool Успех или провал
 	["error"]=> string Причина провала
 	["payload"]=> string Полезная нагрузка
