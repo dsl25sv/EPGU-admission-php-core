@@ -57,7 +57,17 @@ class epgu_lib{
 				$result['success'] = isset($q_result['payload']);
 				
 				if($result['success']){
-					$result['payload'] = $q_result['payload'];
+					
+					$check_payload_xml = (array) simplexml_load_string($q_result['payload']);
+					
+					$result['success'] = !isset($check_payload_xml['Error']);
+					
+					if($result['success']){
+						$result['payload'] = $q_result['payload'];
+					}else{
+						$result['error'] = (string) $check_payload_xml['Error']->Description;
+					}
+					
 				}else{
 					$result['error'] = isset($q_result['error']) ? $q_result['error'] : 'Неизвестная ошибка при получении очереди';
 				}
