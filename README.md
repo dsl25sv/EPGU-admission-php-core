@@ -5,7 +5,7 @@
 
 ```
 $epgu = new epgu_lib;
-$epgu->checkCrypto();
+$result = $epgu->checkCrypto();
 ```
 
 <h2>Справочники</h2>
@@ -34,4 +34,14 @@ $q['payload'] = '
 ';
 		
 $result = $epgu->queue($q);
+```
+
+Результат имеет структуру:
+
+```
+array(1) {
+	["success"]=> bool Успех или провал
+	["error"]=> string Причина провала
+	["payload"]=> string Полезная нагрузка
+}
 ```
