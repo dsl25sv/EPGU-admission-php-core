@@ -170,7 +170,7 @@ class epgu_lib{
 		if(file_exists($file_msg)) unlink($file_msg);
 		
 		if($signing_res[2][0] != '0x00000000'){
-			return ['error' => 'Не удалось подписать файл. Трейс: '.$signing];
+			return ['error' => 'Не удалось подписать файл. '.$signing];
 		}
 				
 		// извлекаем сигнатуру из подписанного файла
