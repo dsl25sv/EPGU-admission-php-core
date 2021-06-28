@@ -130,7 +130,7 @@ class epgu_lib{
 		
 		$ch = curl_init($this->server.'/'.trim($uri, '/'));
 		
-		curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+		curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
 		curl_setopt($ch, CURLOPT_POST, 1);
 		curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($body));
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
