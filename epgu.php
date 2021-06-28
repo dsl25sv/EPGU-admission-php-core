@@ -158,7 +158,7 @@ class epgu_lib{
 		
 		// файл на выход в формате $file_msg.sgn
 		// Создаётся автоматически при подписи
-		$file_sign = $file_msg . '.sgn';
+		$file_sign = $file_msg.'.sgn';
 				
 		// для подписи файла
 		$signing = shell_exec($this->cryptcp_prefix."cryptcp -sign -der -strict -cert -detached -thumbprint ".$this->thumbprint." ".$file_msg."");
