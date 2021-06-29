@@ -282,8 +282,9 @@ class epgu_lib{
 		return $result;
 	}
 	
-	// если нужно проверить права на метод очередей
-	private function checkPerms(){
+	// если нужно проверить права на действия
+	// в очередях проверка встроена
+	public function checkPerms(){
 		return true;
 	}
 
